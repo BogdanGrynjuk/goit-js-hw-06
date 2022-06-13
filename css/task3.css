@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;  
+  padding-top: 20px;  
+}
+
+.gallery__item {
+  list-style: none;  
+}
+
+.gallery__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.gallery__img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
