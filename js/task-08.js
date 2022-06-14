@@ -3,18 +3,16 @@ const loginForm = document.querySelector('.login-form');
 loginForm.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(event) {
-  event.preventDefault();
+  event.preventDefault();  
 
-  const formData = new FormData(event.currentTarget);
- 
-  formData.forEach((value, name) => {
-    if (!value) {      
-      alert('Будь ласка заповніть усі поля!!!');
-      console.clear();
-      return;
-    }
-    console.log(`${name}: ${value}`);
-  });
+  const { elements: { email, password } } = event.currentTarget;
+
+  if (!email.value || !password.value) {
+    return alert('Будь ласка заповніть усі поля!!!');
+  }
+
+  console.log(`${email.name}: ${email.value}`);
+  console.log(`${password.name}: ${password.value}`);
 
   event.currentTarget.reset();
 }
