@@ -19,14 +19,14 @@ function getRandomHexColor() {
 }
 
 function createBoxes() {
-  const arrayNewboxes = [];  
+  const arrayNewBoxes = [];  
 
-  for (let i = 0; i < amount; i += 1) {
+  for (let i = 1; i <= amount; i += 1) {
     let newBox = `<div style="width: ${i * 10 + 20}px; height: ${i * 10 + 20}px; background-color: ${getRandomHexColor()};"></div>`;
-    arrayNewboxes.push(newBox);    
+    arrayNewBoxes.push(newBox);    
   }
 
-  containerForBoxesEl.insertAdjacentHTML('afterbegin', arrayNewboxes.join(''));  
+  containerForBoxesEl.insertAdjacentHTML('afterbegin', arrayNewBoxes.join(''));  
 }
 
 function destroyBoxes() {
