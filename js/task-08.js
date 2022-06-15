@@ -8,11 +8,12 @@ function onFormSubmit(event) {
   const { elements: { email, password } } = event.currentTarget;
 
   if (!email.value || !password.value) {
+    console.clear();
     return alert('Будь ласка заповніть усі поля!!!');
   }
 
   console.log(`${email.name}: ${email.value}`);
-  console.log(`${password.name}: ${password.value}`);
+  console.log(`${password.name}: ${password.value}`); 
 
   event.currentTarget.reset();
 }
