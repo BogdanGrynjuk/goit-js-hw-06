@@ -12,8 +12,8 @@ function onFormSubmit(event) {
     return alert('Будь ласка заповніть усі поля!!!');
   }
 
-  console.log(`${email.name}: ${email.value}`);
-  console.log(`${password.name}: ${password.value}`); 
+  console.log(email);
+  console.log(password); 
 
   event.currentTarget.reset();
 }

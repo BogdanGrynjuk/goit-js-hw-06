@@ -22,7 +22,12 @@ function createBoxes() {
   const arrayNewBoxes = [];  
 
   for (let i = 1; i <= amount; i += 1) {
-    let newBox = `<div style="width: ${i * 10 + 20}px; height: ${i * 10 + 20}px; background-color: ${getRandomHexColor()};"></div>`;
+    let newBox = 
+    `<div 
+      style="width: ${i * 10 + 20}px; 
+      height: ${i * 10 + 20}px; 
+      background-color: ${getRandomHexColor()};">
+    </div>`;
     arrayNewBoxes.push(newBox);    
   }
 
